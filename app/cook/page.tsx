@@ -205,7 +205,7 @@ export default function CookPage() {
           <div>
             {!loading && recipes.length === 0 && (
               <div style={{ textAlign: 'center', padding: 60, border: '2px dashed var(--border-muted)' }}>
-                <img
+                <Image
                       src="https://thumbs.dreamstime.com/b/emoji-cook-isolated-white-background-emoticon-restaurant-chef-d-rendering-illustration-emoji-cook-isolated-white-background-108815765.jpg"
                       alt="cooking..."
                       style={{ width: 80, height: 80, objectFit: 'contain', marginBottom: 16, animation: 'blink 3.8s infinite' }}
