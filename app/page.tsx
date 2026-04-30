@@ -12,7 +12,7 @@ const FEATURES = [
     sub: 'Track Your Ingredients',
     icon: '🧊',
     href: '/pantry',
-    color: 'var(--blue)',
+    color: 'var(--bg-card2)',
   },
   {
     id: 'B',
@@ -20,7 +20,7 @@ const FEATURES = [
     sub: 'API Recipe Generator',
     icon: '🍳',
     href: '/cook',
-    color: 'var(--orange)',
+    color: 'var(--bg-card2)',
   },
   {
     id: 'C',
