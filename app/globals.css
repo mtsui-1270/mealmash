@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323:wght@400&display=swap');
+
+:root {
+  --bg-dark: #37202C;
+  --bg-card: #2a1a20;
+  --bg-card2: #432a30;
+  --orange: #F08A4B;
+  --orange-dark: #c96e30;
+  --blue: #577590;
+  --cream: #D8DCBB;
+  --text-primary: #f5e6d3;
+  --text-muted: #a08070;
+  --border: #F08A4B;
+  --border-muted: #5a3a2a;
+  --red: #e03030;
+  --font-pixel: 'Press Start 2P', monospace;
+  --font-vt: 'VT323', monospace;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  font-family: var(--font-vt);
+  font-size: 18px;
+  min-height: 100vh;
+}
+
+.pixel-border {
+  border: 2px solid var(--orange);
+  box-shadow: 4px 4px 0px #000;
+}
+
+.pixel-border-dark {
+  border: 2px solid var(--border-muted);
+  box-shadow: 4px 4px 0px #000;
+}
+
+.pixel-btn {
+  font-family: var(--font-pixel);
+  font-size: 10px;
+  background: var(--orange);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  cursor: pointer;
+  box-shadow: 4px 4px 0px #000;
+  transition: transform 0.05s, box-shadow 0.05s;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.pixel-btn:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000;
+}
+
+.pixel-btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px #000;
+}
+
+.pixel-btn-outline {
+  background: transparent;
+  color: var(--orange);
+  border: 2px solid var(--orange);
+}
+
+.pixel-btn-red {
+  background: var(--red);
+}
+
+.pixel-btn-blue {
+  background: var(--blue);
+}
+
+.pixel-input {
+  background: var(--bg-dark);
+  border: 2px solid var(--border-muted);
+  color: var(--text-primary);
+  font-family: var(--font-vt);
+  font-size: 18px;
+  padding: 8px 12px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.pixel-input:focus {
+  border-color: var(--orange);
+}
+
+.pixel-input::placeholder {
+  color: var(--text-muted);
+}
+
+.pixel-select {
+  background: var(--bg-dark);
+  border: 2px solid var(--border-muted);
+  color: var(--text-primary);
+  font-family: var(--font-vt);
+  font-size: 18px;
+  padding: 8px 12px;
+  width: 100%;
+  outline: none;
+  cursor: pointer;
+  appearance: none;
+}
+
+.pixel-select:focus {
+  border-color: var(--orange);
+}
+
+.pixel-card {
+  background: var(--bg-card);
+  border: 2px solid var(--orange);
+  box-shadow: 4px 4px 0px #000;
+  padding: 16px;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-dark); }
+::-webkit-scrollbar-thumb { background: var(--orange); border: 1px solid #000; }
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  padding: 20px;
+}
+
+.scanlines::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0,0,0,0.05) 2px,
+    rgba(0,0,0,0.05) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.tag {
+  font-family: var(--font-pixel);
+  font-size: 7px;
+  padding: 4px 8px;
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.1s;
+}
+
+.tag.active, .tag:hover {
+  background: var(--orange);
+  color: #fff;
+}
