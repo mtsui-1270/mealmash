@@ -203,7 +203,11 @@ export default function CookPage() {
           <div>
             {!loading && recipes.length === 0 && (
               <div style={{ textAlign: 'center', padding: 60, border: '2px dashed var(--border-muted)' }}>
-                <div style={{ fontSize: 48, marginBottom: 16 }}>🍽️</div>
+                <img
+                  src="/chefhat.png"
+                  alt="waiting to cook"
+                  style={{ width: 80, height: 80, objectFit: 'contain', marginBottom: 16 }}
+                />
                 <p style={{ fontFamily: 'var(--font-pixel)', fontSize: 9, color: 'var(--text-muted)' }}>
                   WAITING FOR INPUT
                 </p>
