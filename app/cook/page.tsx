@@ -37,7 +37,6 @@ export default function CookPage() {
   const [savedIds, setSavedIds] = useState<Set<number>>(new Set());
 
   useEffect(() => {
-    // Load pantry items
     fetch('/api/pantry')
       .then(r => r.json())
       .then(data => {
@@ -45,7 +44,6 @@ export default function CookPage() {
         setPantryLoading(false);
       });
 
-    // Load already saved recipes so we know which are favorited
     fetch('/api/recipes')
       .then(r => r.json())
       .then(data => {
@@ -114,7 +112,7 @@ export default function CookPage() {
         {/* Header */}
         <div className="pixel-card" style={{ marginBottom: 24 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-            <span style={{ fontSize: 28 }}>🧑‍🍳</span>
+            <span style={{ fontSize: 28 }}>🍳</span>
             <div>
               <h1 style={{ fontFamily: 'var(--font-pixel)', fontSize: 14, color: 'var(--orange)' }}>
                 COOK THIS!
@@ -201,7 +199,7 @@ export default function CookPage() {
             </button>
           </div>
 
-                {/* Right panel: results */}
+          {/* Right panel: results */}
           <div>
             {!loading && recipes.length === 0 && (
               <div style={{ textAlign: 'center', padding: 60, border: '2px dashed var(--border-muted)' }}>
@@ -223,6 +221,7 @@ export default function CookPage() {
                 </p>
               </div>
             )}
+
             {recipes.length > 0 && (
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 14 }}>
                 {recipes.map(recipe => (
@@ -247,7 +246,7 @@ export default function CookPage() {
                           ⏱ {recipe.readyInMinutes}min
                         </span>
                         <span style={{ fontFamily: 'var(--font-vt)', fontSize: 14, color: 'var(--text-muted)' }}>
-                          🧑‍🍳 {recipe.servings} servings
+                          🍽 {recipe.servings} servings
                         </span>
                       </div>
                       <div style={{ display: 'flex', gap: 8 }}>
