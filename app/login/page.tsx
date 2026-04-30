@@ -48,9 +48,7 @@ export default function LoginPage() {
           <span style={{ color: 'var(--cream)' }}>MEAL</span>
           <span style={{ color: 'var(--orange)' }}>MASH</span>
         </h1>
-        <p style={{ fontFamily: 'var(--font-vt)', fontSize: 20, color: 'var(--text-muted)', marginTop: 8 }}>
-          Your Pixel-Powered Recipe Companion
-        </p>
+        
       </div>
 
       {/* Card */}
