@@ -101,7 +101,7 @@ export default function CookPage() {
     });
 
     setSaving(null);
-    if (res.ok) setSavedIds(prev => new Set([...prev, recipe.id]));
+    if (res.ok) setSavedIds(prev => new Set(Array.from(prev).concat(recipe.id)));
   };
 
   return (
