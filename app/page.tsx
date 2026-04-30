@@ -78,7 +78,16 @@ export default async function HomePage() {
                 cursor: 'pointer',
                 transition: 'transform 0.08s, box-shadow 0.08s',
                 position: 'relative',
-              }}>
+              }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLElement).style.transform = 'scale(1.05)';
+                  (e.currentTarget as HTMLElement).style.boxShadow = '8px 8px 0px #000';
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.transform = 'scale(1)';
+                  (e.currentTarget as HTMLElement).style.boxShadow = '6px 6px 0px #000';
+                }}
+              >
                 <span style={{ fontSize: 28 }}>{f.icon}</span>
                 <div>
                   <div style={{
