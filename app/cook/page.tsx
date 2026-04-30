@@ -201,15 +201,18 @@ export default function CookPage() {
             </button>
           </div>
 
-          {/* Right panel: results */}
-          <div>
-            {!loading && recipes.length === 0 && (
+         {!loading && recipes.length === 0 && (
               <div style={{ textAlign: 'center', padding: 60, border: '2px dashed var(--border-muted)' }}>
-                <Image
-                      src="https://thumbs.dreamstime.com/b/emoji-cook-isolated-white-background-emoticon-restaurant-chef-d-rendering-illustration-emoji-cook-isolated-white-background-108815765.jpg"
-                      alt="cooking..."
-                      style={{ width: 80, height: 80, objectFit: 'contain', marginBottom: 16, animation: 'blink 3.8s infinite' }}
-                    />
+                <div style={{ marginBottom: 16 }}>
+                  <Image
+                    src="https://thumbs.dreamstime.com/b/emoji-cook-isolated-white-background-emoticon-restaurant-chef-d-rendering-illustration-emoji-cook-isolated-white-background-108815765.jpg"
+                    alt="waiting..."
+                    width={80}
+                    height={80}
+                    style={{ objectFit: 'contain' }}
+                    unoptimized
+                  />
+                </div>
                 <p style={{ fontFamily: 'var(--font-pixel)', fontSize: 9, color: 'var(--text-muted)' }}>
                   WAITING FOR INPUT
                 </p>
@@ -227,7 +230,6 @@ export default function CookPage() {
                 </p>
               </div>
             )}
-
             {recipes.length > 0 && (
               <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 14 }}>
                 {recipes.map(recipe => (
