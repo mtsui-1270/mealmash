@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'MealMash',
-  description: 'Your pixel-powered recipe companion',
+  description: 'Your recipe generator',
 };
 
 export default function RootLayout({
