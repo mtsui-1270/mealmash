@@ -36,7 +36,11 @@ export default function Navbar() {
     }}>
       {/* Logo */}
       <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
-        <span style={{ fontSize: 22 }}>🍳</span>
+        <img 
+          src="chefhat.png" 
+          alt="chef hat icon" 
+          style={{ width: 26, height: 26, objectFit: 'contain' }} 
+        />
         <span style={{ fontFamily: 'var(--font-pixel)', fontSize: 13, letterSpacing: 1 }}>
           <span style={{ color: 'var(--cream)' }}>MEAL</span>
           <span style={{ color: 'var(--orange)' }}>MASH</span>

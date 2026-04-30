@@ -112,7 +112,7 @@ export default function CookPage() {
         {/* Header */}
         <div className="pixel-card" style={{ marginBottom: 24 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 14 }}>
-            <span style={{ fontSize: 28 }}>🍳</span>
+            <span style={{ fontSize: 28 }}>🧑‍🍳</span>
             <div>
               <h1 style={{ fontFamily: 'var(--font-pixel)', fontSize: 14, color: 'var(--orange)' }}>
                 COOK THIS!
@@ -215,7 +215,7 @@ export default function CookPage() {
 
             {loading && (
               <div style={{ textAlign: 'center', padding: 60 }}>
-                <div style={{ fontSize: 48, marginBottom: 16, animation: 'blink 0.8s infinite' }}>🍳</div>
+                <div style={{ fontSize: 48, marginBottom: 16, animation: 'blink 1.8s infinite' }}>🍳</div>
                 <p style={{ fontFamily: 'var(--font-pixel)', fontSize: 9, color: 'var(--orange)' }}>
                   GENERATING RECIPES...
                 </p>
