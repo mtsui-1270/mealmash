@@ -201,18 +201,11 @@ export default function CookPage() {
             </button>
           </div>
 
-         {!loading && recipes.length === 0 && (
+                {/* Right panel: results */}
+          <div>
+            {!loading && recipes.length === 0 && (
               <div style={{ textAlign: 'center', padding: 60, border: '2px dashed var(--border-muted)' }}>
-                <div style={{ marginBottom: 16 }}>
-                  <Image
-                    src="https://thumbs.dreamstime.com/b/emoji-cook-isolated-white-background-emoticon-restaurant-chef-d-rendering-illustration-emoji-cook-isolated-white-background-108815765.jpg"
-                    alt="waiting..."
-                    width={80}
-                    height={80}
-                    style={{ objectFit: 'contain' }}
-                    unoptimized
-                  />
-                </div>
+                <div style={{ fontSize: 48, marginBottom: 16 }}>🍽️</div>
                 <p style={{ fontFamily: 'var(--font-pixel)', fontSize: 9, color: 'var(--text-muted)' }}>
                   WAITING FOR INPUT
                 </p>
