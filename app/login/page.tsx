@@ -43,7 +43,11 @@ export default function LoginPage() {
     }}>
       {/* Logo */}
       <div style={{ marginBottom: 48, textAlign: 'center' }}>
-        <div style={{ fontSize: 48, marginBottom: 12 }}>🍳</div>
+        <img
+          src="/chefhat.png"
+          alt="mealmash"
+          style={{ width: 80, height: 80, objectFit: 'contain', marginBottom: 12 }}
+        />
         <h1 style={{ fontFamily: 'var(--font-pixel)', fontSize: 28, letterSpacing: 4, textShadow: '4px 4px 0px #000' }}>
           <span style={{ color: 'var(--cream)' }}>MEAL</span>
           <span style={{ color: 'var(--orange)' }}>MASH</span>
