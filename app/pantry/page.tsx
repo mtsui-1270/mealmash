@@ -13,10 +13,10 @@ type PantryItem = {
 const CATEGORIES = ['ALL', 'PRODUCE', 'DAIRY', 'MEAT', 'GRAINS', 'OTHER'];
 
 const CATEGORY_ICONS: Record<string, string> = {
-  PRODUCE: '🥦',
-  DAIRY: '🥛',
+  PRODUCE: '🥗',
+  DAIRY: '🧀',
   MEAT: '🥩',
-  GRAINS: '🌾',
+  GRAINS: '🍚',
   OTHER: '🍱',
 };
 
