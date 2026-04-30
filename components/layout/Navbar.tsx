@@ -37,7 +37,7 @@ export default function Navbar() {
       {/* Logo */}
       <Link href="/" style={{ textDecoration: 'none', display: 'flex', alignItems: 'center', gap: 10 }}>
         <img 
-          src="chefhat.png" 
+          src="/chefhat.png" 
           alt="chef hat icon" 
           style={{ width: 26, height: 26, objectFit: 'contain' }} 
         />
